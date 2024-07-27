@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+//Fonts
+$font-secondary: var(--bs-font-sans-serif);
+// $ArabicUIText-font: 'ArabicUI', Sans-Serif;
+
+//colors
+$primary-color: #d6a653;
+// $primary-light: #395F9F;
+// $primary-dark: #00486C;
+
+$secondary-color: #08885e;
+$secondary-light: #fef5ef;
+
+$text-color: #262628;
+$text-dark: #3c4449;
+$text-light: #a4a5a5;
+$text-bold: #2c2e32;
+$text-black: #000000;
+
+// bg-colors
+$bg-color-primary: #f0f9f6;
+$table-bg-color: #f0f9f6;
+$table-border-color: #e6e6e6;
+$bg-gray: #f2f2f2;
+
+/*status colors*/
+$color-info: #3f5fa0;
+$color-success: #1b6144;
+$color-warning: #fb8904;
+$color-danger: #b42318;
+$color-dangerLight: #cc3333;
+$color-dangerDark: #790606;
+
+/*status-background*/
+$background-info: rgba(63, 95, 160, 0.16);
+$background-success: #e1f4e9;
+$background-warning: #fef3d0;
+$background-danger: #fef3f2;
+
+// transitions
+
+$transition: all 0.35s ease-in-out;
+$border-radius-sm: 0.4rem;
+$border-radius-md: 0.8rem;
+$border-radius-lg: 1.2rem;
+$border-radius-xl: 1.6rem;
+.c-color {
+    color: $text-color !important;
+}

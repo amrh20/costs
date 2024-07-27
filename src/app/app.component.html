@@ -1,0 +1,84 @@
+<div class="wrapper">
+  <div class="title">المصاريف</div>
+  <div class="add_form d-lg-flex justify-content-between">
+    <div class="row w-100">
+      <div class="col-lg-2 mb-3">
+        <input
+          type="number"
+          [(ngModel)]="amount"
+          placeholder="المبلغ"
+          class="input"
+        />
+      </div>
+      <div class="col-lg-6 mb-3">
+        <input
+          type="text"
+          [(ngModel)]="reason"
+          placeholder="السبب"
+          class="input"
+        />
+      </div>
+      <div class="col-lg-2 mb-3 d-flex">
+        <div class="check">
+          <input type="checkbox" [(ngModel)]="isCurrentMonthOnly" />
+          <label> هذا الشهر فقط</label>
+        </div>
+      </div>
+      <div class="col-lg-2 mb-3 d-flex">
+        <div class="check">
+          <input type="checkbox" [(ngModel)]="isOtherAccounts" />
+          <label> حسابات اخري </label>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button (click)="addEntry()">إضافه</button>
+    </div>
+  </div>
+  <div class="table_wrapper">
+    <table>
+      <tr>
+        <th>المبلغ</th>
+        <th>السبب</th>
+        <th>حذف</th>
+      </tr>
+      <tr
+        *ngFor="let entry of entries; let i = index"
+        [style.color]="entry.color"
+      >
+        <td>{{ entry.amount }}</td>
+        <td>{{ entry.reason }}</td>
+        <td>
+          <button (click)="deleteEntry(i)" class="delete-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-trash"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5.5 5.5A.5.5 0 0 1 6 5h4a.5.5 0 0 1 .5.5v7A.5.5 0 0 1 10 13H6a.5.5 0 0 1-.5-.5v-7zM4.118 4a1.5 1.5 0 0 1 1.415-1h4.934a1.5 1.5 0 0 1 1.415 1H14.5a.5.5 0 0 1 0 1h-1v9.5A2.5 2.5 0 0 1 11 17H5a2.5 2.5 0 0 1-2.5-2.5V5h-1a.5.5 0 0 1 0-1h1.618zM4.5 4h7a.5.5 0 0 0-.5-.5H5a.5.5 0 0 0-.5.5zM5 1.5A.5.5 0 0 0 5 2h6a.5.5 0 0 0 0-1H5z"
+              />
+            </svg>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="costs">
+    <div class="col">
+      <h1>اجمالي حسابات هذه الشهر فقط</h1>
+      <span>: {{ currentMonthTotal }}</span>
+    </div>
+    <div class="col">
+      <h1>اجمالي حسابات اخري</h1>
+      <span>: {{ otherAccountsTotal }}</span>
+    </div>
+    <div class="col">
+      <h1>الاجمالي</h1>
+      <span>: {{ overallTotal }}</span>
+    </div>
+  </div>
+</div>

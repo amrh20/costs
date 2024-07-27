@@ -1,0 +1,18 @@
+# Atomic
+--------
+- fs => font-size - number
+---------------------------------------------
+- fw => font-weight - number
+---------------------------------------------
+- p => padding - number
+  - - s => inline-start 
+  - - e => inline-end
+  - - t => top
+  - - e => end
+---------------------------------------------
+- m => margin - number
+  - - s => inline-start
+  - - e => inline-end
+  - - t => top
+  - - e => end
+---------------------------------------------

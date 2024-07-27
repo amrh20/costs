@@ -1,0 +1,93 @@
+.input {
+    border: 1px solid #dadce0;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 16px;
+    height: 48px;
+    width: 100%;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    margin-inline-end: 24px;
+    label {
+        margin-inline-start: 8px;
+    }
+}
+
+button {
+    border: 0;
+    width: 100px;
+    height: 48px;
+    background: teal;
+    color: #fff;
+    border-radius: 6px;
+}
+.costs {
+    margin-top: 50px;
+    .col {
+        display: flex;
+        margin-bottom: 12px;
+        h1 {
+            font-size: 18px;
+            margin-inline-end: 14px;
+            font-family: "Cairo-Medium";
+        }
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.table_wrapper {
+    border: 1px solid #ccc;
+}
+.wrapper {
+    padding: 30px;
+}
+
+.table_wrapper {
+    min-height: 30vh;
+    background: #fcf9f9;
+    margin-top: 24px;
+
+    table {
+        width: 100%;
+        th,
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.delete-button svg {
+    color: red;
+    width: 24px;
+    height: 24px;
+}
+
+.title {
+    font-size: 22px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 33px;
+}
